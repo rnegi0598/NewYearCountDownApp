@@ -22,6 +22,7 @@ body{
     }
 }
 .main-container{
+    position: relative;
     background:linear-gradient(to bottom,rgba(255,0,255,0.3),rgba(0,255,255,0.3));
     width: 100%;
     height: 100%;
@@ -96,6 +97,7 @@ main{
     font-size: 1.4rem;
 }
 .share-button{
+    /* position: relative; */
     margin-top: 20px;
     
 }
@@ -107,7 +109,9 @@ main{
     padding: 10px 30px;
     font-size: 1.2rem;
 }
-
+.share-button button:hover{
+    background-color:  rgba(224, 19, 53,1);
+}
 
 
 
@@ -117,8 +121,8 @@ main{
     height: 300px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     gap:20px;
-    justify-content:center;
     /* border:5px solid blue; */
     text-align: center;
 }
@@ -203,4 +207,71 @@ main{
 }
 .hundred{
     height: 100%;
+}
+
+
+/* modal */
+.show{
+    display:block;
+}
+.hide{
+    display: none;
+}
+.modal{
+    position: absolute;
+    background-color: grey;
+    width: 550px;
+    height: 200px;
+    padding: 20px 30px;
+    border: 3px solid black;
+    top:190px;
+    left: 20%;
+  
+}
+.modal-box{
+    display: flex;
+}
+.close-modal{
+    
+    text-align: right;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.close-modal span{
+    border: 2px solid black;
+    background-color: rgb(75, 64, 64);
+    padding: 10px;
+}
+.share-para{
+    padding-bottom: 10px;
+    font-weight: 800;
+    text-align: left;
+}
+.url-box{
+    width: 90%;
+    height: 60px;
+    border: 2px solid black;
+    padding: 13px;
+    font-size: 1.2rem;
+}
+.copy-box{
+    margin-left: 12px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(5, 4, 83);
+    cursor: pointer;
+}
+@media all and (max-width:950px){
+    .modal{
+        /* background-color: lightblue; */
+        width: 100%;
+        left: 0;
+        top: 180px;
+       
+    }
+    .modal-box{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
