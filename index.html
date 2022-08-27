@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewYear CountDown</title>
     <link rel="stylesheet" href="style.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css" integrity="sha512-f2MWjotY+JCWDlE0+QAshlykvZUtIm35A6RHwfYZPdxKgLJpL8B+VVxjpHJwZDsZaWdyHVhlIHoblFYGkmrbhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="main-container">
@@ -17,15 +19,27 @@
                 <p>Share with your friends warm words to all the wishes in the new year will be granted .</p>
                 <div class="share-button">
                     <button id="shareBtn">Share</button>
-                    <div id="modal" class="modal hide">
-                        <p id="close-modal" class="close-modal"><span>close</span></p>
+                    <!-- modal -->
+                    <!-- <div id="modal" class="modal hide"> -->
+                    <div id="modal" class="modal show">
+                        <p id="close-modal" class="close-modal"><span><i class="fas fa-window-close fa-2x"></i></span></p>
+                        <div class="social-icons">
+                            <div class="twitter"><a href="https://www.twitter.com" target="_blank" ><i class="fab fa-twitter fa-2x"></i></a></div>
+                            <div class="fb"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></div>
+                            <div class="instagram"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
+                            <div class="whattsapp"><a href="https://www.whatsapp.com
+                                " target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a></div>
+                            
+                        </div>
+                        
                         <p class="share-para">Share !!</p>
                         <div class="modal-box">
                             <input id="url-box" class="url-box" type="text" value="https://github.com/rnegi0598/NewYearCountDownApp/blob/master/style.css">
                             <div id="url-box" class="url-box" style="display: none;"></div>
-                            <div id="copy-box" class="copy-box">copy</div>
+                            <div id="copy-box" class="copy-box"><span style="padding-right:5px">copy</span><i class="fas fa-copy"></i></div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="countdown-container">
