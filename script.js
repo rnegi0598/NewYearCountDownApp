@@ -125,3 +125,39 @@ function toWord(num){
 setInterval(countdown,1000);
 
 
+// share
+const urlElem=document.getElementById("url-box");
+urlElem.innerHTML=document.URL;
+
+const shareEl=document.getElementById("shareBtn");
+
+const modalEl=document.getElementById("modal");
+
+const copyEl=document.getElementById('copy-box');
+
+
+function copyUrl(){
+    let copyText=document.getElementById('url-box');
+    copyText.select();
+    copyText.setSelectionRange(0,99999);
+    console.log(copyText);
+    navigator.clipboard.writeText(copyText.value);
+}
+copyEl.addEventListener('click',copyUrl);
+
+function shareFunc(){
+    modalEl.classList.remove('hide');
+    modalEl.classList.add("show");    
+}
+shareEl.addEventListener('click',shareFunc);
+
+
+// close modal
+
+function closeModal(){
+    modalEl.classList.remove('show');
+    modalEl.classList.add('hide');
+}
+document.getElementById('close-modal').addEventListener('click',closeModal);
+
+
